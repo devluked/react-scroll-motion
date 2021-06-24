@@ -25,7 +25,7 @@ const Animator = ({ children, animation = {} } : IProp) => {
       ? { ...filterStyle(animation?.out?.style, currentProgress) }
       : currentPage === page - 1 // for next (in)
       ? { ...filterStyle(animation?.in?.style, currentProgress) }
-      : { display: "none" };
+      : { display: "initial"};
 
   return <div style={calculatedStyle}>{children}</div>;
 };
